@@ -1,3 +1,4 @@
+#importing the voice output library
 import pyttsx3
 
 engine = pyttsx3.init("sapi5")
@@ -8,6 +9,7 @@ def speak(msg):
     engine.say(msg)
     engine.runAndWait()
 
+#importing all other libraries
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -15,6 +17,7 @@ mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
 cap = cv2.VideoCapture(0)
 
+#function to calculate angle between three points a,b,c
 def calculate_angle(a,b,c):
     a = np.array(a) # First
     b = np.array(b) # Mid
